@@ -380,7 +380,7 @@ const Brochure = () => {
                   <Phone className="h-6 w-6" />
                   <div>
                     <p className="font-semibold">Call Us</p>
-                    <p className="opacity-90">+254 700 000 000</p>
+                    <p className="opacity-90">+254 111 810 434</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
