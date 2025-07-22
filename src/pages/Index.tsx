@@ -91,21 +91,13 @@ const Index = () => {
                   🏆 KNEC Connected
                 </Badge>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button 
                   onClick={() => setShowLoginModal(true)}
                   size="lg" 
                   className="bg-gradient-to-r from-red-600 to-green-600 hover:from-red-700 hover:to-green-700 text-white px-8 py-4 text-lg"
                 >
                   Access Your School Portal
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  onClick={() => setShowLoginModal(true)}
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
-                >
-                  Try Demo
                 </Button>
               </div>
               <div className="flex justify-center mt-6">
