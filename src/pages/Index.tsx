@@ -102,10 +102,19 @@ const Index = () => {
                 <Button 
                   variant="outline"
                   size="lg"
-                  onClick={() => window.open('/brochure', '_blank')}
-                  className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-8 py-4 text-lg"
+                  onClick={() => setShowLoginModal(true)}
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
                 >
-                  View Pricing & Packages
+                  Try Demo
+                </Button>
+              </div>
+              <div className="flex justify-center mt-6">
+                <Button 
+                  variant="ghost"
+                  onClick={() => window.open('/brochure', '_blank')}
+                  className="text-green-600 hover:text-green-700 underline"
+                >
+                  📄 Download Complete Brochure & Pricing
                 </Button>
               </div>
             </div>
