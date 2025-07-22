@@ -259,6 +259,58 @@ const Brochure = () => {
           </div>
         </div>
 
+        {/* Analytics & Reports Pricing */}
+        <Card className="bg-gradient-to-r from-blue-50 to-emerald-50 border-2 border-blue-200">
+          <CardHeader className="text-center">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <BarChart3 className="h-6 w-6 text-blue-600" />
+              </div>
+              <div>
+                <CardTitle className="text-2xl text-blue-900">Analytics & Reports Module</CardTitle>
+                <p className="text-blue-700">Data-driven insights for better decisions</p>
+              </div>
+            </div>
+            <div className="text-4xl font-bold text-blue-600 mb-2">KSh 80,000</div>
+            <Badge className="bg-blue-600 text-white mb-4">Essential for MoE Compliance</Badge>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-blue-900 mb-3">Core Features</h4>
+                <ul className="space-y-2">
+                  {["Real-time Dashboards", "MoE Compliance Reports", "Performance Analytics", "PDF/Excel Export"].map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-blue-900 mb-3">Advanced Features</h4>
+                <ul className="space-y-2">
+                  {["Custom Reports", "Data Visualization", "Trend Analysis", "Automated Scheduling"].map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="mt-6 p-4 bg-blue-100 rounded-lg">
+              <p className="text-sm text-blue-800">
+                <strong>Why Essential:</strong> Required for Ministry of Education compliance reports, 
+                academic performance tracking, and data-driven decision making for school improvement.
+              </p>
+            </div>
+            <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700">
+              Add to Package
+            </Button>
+          </CardContent>
+        </Card>
+
         {/* Additional Services */}
         <Card>
           <CardHeader>
