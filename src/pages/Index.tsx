@@ -91,13 +91,23 @@ const Index = () => {
                   🏆 KNEC Connected
                 </Badge>
               </div>
-              <Button 
-                onClick={() => setShowLoginModal(true)}
-                size="lg" 
-                className="bg-gradient-to-r from-red-600 to-green-600 hover:from-red-700 hover:to-green-700 text-white px-8 py-4 text-lg"
-              >
-                Access Your School Portal
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => setShowLoginModal(true)}
+                  size="lg" 
+                  className="bg-gradient-to-r from-red-600 to-green-600 hover:from-red-700 hover:to-green-700 text-white px-8 py-4 text-lg"
+                >
+                  Access Your School Portal
+                </Button>
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  onClick={() => window.open('/brochure', '_blank')}
+                  className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-8 py-4 text-lg"
+                >
+                  View Pricing & Packages
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -166,6 +176,92 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Pricing Overview Section */}
+        <div className="px-4 py-16 mx-auto max-w-7xl bg-gradient-to-r from-green-50 to-blue-50">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Transparent Pricing for Every School
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Affordable packages designed for Kenyan schools, from primary to secondary institutions
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Basic Package */}
+            <Card className="border-2 border-blue-200 hover:border-blue-400 transition-colors">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-blue-600">Basic Package</CardTitle>
+                <div className="text-3xl font-bold text-gray-900 mt-2">KSh 450,000</div>
+                <p className="text-gray-600">Perfect for small primary schools</p>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {["Student Management", "Basic Academics", "Simple Finance", "Attendance Tracking", "Parent Portal"].map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Professional Package */}
+            <Card className="border-2 border-green-400 bg-green-50 transform scale-105 relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-green-600 text-white px-4 py-1">Most Popular</Badge>
+              </div>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-green-600">Professional</CardTitle>
+                <div className="text-3xl font-bold text-gray-900 mt-2">KSh 750,000</div>
+                <p className="text-gray-600">Ideal for secondary schools</p>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {["All Basic Features", "Advanced Academics", "M-Pesa Integration", "Staff Management", "Analytics & Reports", "Library System"].map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Package */}
+            <Card className="border-2 border-purple-200 hover:border-purple-400 transition-colors">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-purple-600">Enterprise</CardTitle>
+                <div className="text-3xl font-bold text-gray-900 mt-2">KSh 950,000</div>
+                <p className="text-gray-600">Multi-campus institutions</p>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {["All Professional Features", "Multi-School Support", "Advanced Analytics", "Custom Integrations", "Priority Support", "Training Included"].map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Button 
+              onClick={() => window.open('/brochure', '_blank')}
+              className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 text-lg"
+            >
+              View Complete Pricing Details
+            </Button>
+            <p className="text-sm text-gray-600 mt-4">
+              Includes installation, training, and 1-year support. Flexible payment options available.
+            </p>
           </div>
         </div>
 
